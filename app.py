@@ -1,13 +1,15 @@
 from flask import Flask
-
+from flask import render_template
 from datetime import datetime
 import re
 
 app = Flask(__name__)
 
-@app.route("/")
-def home():
-    return "Hello, Flask!"
+@app.route('/')
+def hello():
+    """simple landing Page."""
+    return render_template('hello_gcp.html')
+
 
 @app.route("/hello/<name>")
 def hello_there(name):
