@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/')
 def hello():
     """simple landing Page."""
-    return render_template('hello_gcp.html')
+    return render_template('hello_azure.html')
 
 
 @app.route("/hello/<name>")
